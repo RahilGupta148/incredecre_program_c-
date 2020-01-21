@@ -1,0 +1,30 @@
+using System;
+
+public class Program 
+{
+	public static void Main()
+	{
+		Console.WriteLine("Enter how much value u want to enter");
+		string num	= Console.ReadLine();
+		int num1 =  Convert.ToInt32(num);
+		string  val;
+		int[] a = new int[100];
+		
+		for (int i=1;i<=num1;i++)
+		{
+			Console.WriteLine("Enter number");
+			 val = Console.ReadLine();
+			a[i] = Convert.ToInt32(val);
+			if(a[i]%2==0)
+			{
+				a[i]=a[i]--;
+				Console.WriteLine(a[i]);
+			}
+			else
+			{
+				a[i]=a[i]++;
+				Console.WriteLine(a[i]);
+			}
+		}
+	}
+}
